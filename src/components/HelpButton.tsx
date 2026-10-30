@@ -42,16 +42,17 @@ const HelpButton = () => {
           <HelpCircle className="h-4 w-4" />
         </button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-sm">
+      <DialogContent className="max-h-[85dvh] overflow-y-auto sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="font-heading">
             어떻게 <span className="text-gradient">동작</span>하나요?
           </DialogTitle>
-          <DialogDescription className="sr-only">
-            Playona 사용 방법 3단계 안내
+          <DialogDescription className="pt-2 text-sm leading-relaxed">
+            Playona는 음악 링크를 변환하고 공유하는 서비스예요. 서로 다른 음악 앱을 쓰는
+            친구에게도 하나의 링크로 좋아하는 곡을 전할 수 있어요.
           </DialogDescription>
         </DialogHeader>
-        <ol className="mt-2 space-y-4">
+        <ol className="mt-2 space-y-5 border-t border-border pt-5">
           {STEPS.map((s) => (
             <li key={s.step} className="flex gap-3">
               <span className="w-7 shrink-0 font-heading text-lg font-bold leading-none text-gradient">
